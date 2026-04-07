@@ -6,7 +6,14 @@ import User from "../models/User.js";
 import Batch from "../models/Batch.js";
 
 const router = Router();
-const BASE_URL = process.env.FRONTEND_URL || process.env.BASE_URL || "http://localhost:5173";
+// QR codes are consumed by mobile browsers; they must use a reachable public/LAN URL.
+// Prefer backend-friendly env vars, but also accept the frontend's VITE_ naming for convenience.
+const BASE_URL =
+  process.env.VERIFY_BASE_URL ||
+  process.env.VITE_VERIFY_BASE_URL ||
+  process.env.FRONTEND_URL ||
+  process.env.BASE_URL ||
+  "http://localhost:5173";
 const API_BASE_URL = process.env.API_BASE_URL || process.env.BACKEND_URL || BASE_URL.replace(/\/$/, "");
 
 // Map blockchain stages to requested status format
@@ -59,9 +66,10 @@ router.get("/user/:walletAddress", async (req, res, next) => {
 // Supports both human-readable batch ID (AGRI-2025-001) and hex ID (0x...)
 router.get("/:batchId/qr", async (req, res, next) => {
   try {
-    let batchId = req.params.batchId.trim();
-    // Generate verification URL - use API endpoint for verification
-    const verifyUrl = `${API_BASE_URL}/api/verify/${encodeURIComponent(batchId)}`;
+    const batchId = req.params.batchId.trim();
+    // Generate verification URL - link to the frontend page (shows the verification UI).
+    // Using the backend JSON endpoint here would make mobile browsers display raw JSON instead.
+    const verifyUrl = `${BASE_URL.replace(/\/$/, "")}/verify/batch/${encodeURIComponent(batchId)}`;
     const png = await QRCode.toBuffer(verifyUrl, { type: "png", width: 256, margin: 2 });
     res.set("Content-Type", "image/png");
     res.set("Cache-Control", "public, max-age=3600");

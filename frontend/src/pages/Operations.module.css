@@ -1,0 +1,222 @@
+.page {
+  padding: 0.4rem 0;
+}
+
+.page h1 {
+  margin: 0 0 0.35rem;
+}
+
+.subtitle {
+  margin: 0 0 0.95rem;
+  color: var(--text-muted);
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.55rem;
+  margin-bottom: 0.8rem;
+}
+
+.input {
+  background: #111a13;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.45rem;
+  margin-bottom: 0.8rem;
+}
+
+.btn {
+  background: #132017;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.45rem 0.7rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(22, 27, 34, 0.9);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.table th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.statusCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.mapWrap {
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.map {
+  width: 100%;
+  height: 320px;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.9rem;
+}
+
+.chartCard {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: rgba(22, 27, 34, 0.9);
+}
+
+.chartCard h3 {
+  margin: 0 0 0.65rem;
+  font-size: 0.98rem;
+}
+
+.barChart {
+  height: 210px;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.45rem;
+}
+
+.barCol {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+  flex: 1;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.bar {
+  width: 100%;
+  max-width: 32px;
+  border-radius: 8px 8px 3px 3px;
+  background: linear-gradient(180deg, #56d364, #238636);
+}
+
+.pieRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.pie {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.legend {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.legend p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.rangeWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.1rem 0.35rem;
+}
+
+.rangeLabel {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.rangeInput {
+  accent-color: #3fb950;
+  min-width: 200px;
+}
+
+.topBars {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.topBarItem {
+  position: relative;
+  border: 1px solid var(--border);
+  background: #10171f;
+  border-radius: 8px;
+  padding: 0.48rem 0.62rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  text-align: left;
+}
+
+.topBarFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(63,185,80,0.55), rgba(86,211,100,0.35));
+}
+
+.topBarText,
+.topBarQty {
+  position: relative;
+  z-index: 1;
+  font-size: 0.86rem;
+}
+
+.topBarText {
+  color: var(--text);
+  font-weight: 600;
+  min-width: 110px;
+}
+
+.topBarQty {
+  color: var(--text-muted);
+}
+
+.hoverInfo {
+  margin-top: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}

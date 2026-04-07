@@ -1,0 +1,26 @@
+========================================
+  AgriChain - Localhost links
+========================================
+
+  Frontend (open in browser):
+  http://localhost:5173
+
+  Backend API:
+  http://localhost:4001
+
+  Health check:
+  http://localhost:4001/health
+
+========================================
+Start backend first: run-backend.bat
+Then frontend:      run-frontend.bat
+========================================
+
+Scan QR code from iPhone/phone (same WiFi):
+1. Find your PC's IP (e.g. ipconfig → IPv4 like 192.168.1.5)
+2. In frontend folder create or edit .env and add:
+   VITE_VERIFY_BASE_URL=http://YOUR_IP:5173
+   (e.g. VITE_VERIFY_BASE_URL=http://192.168.1.5:5173)
+3. Restart frontend (npm run dev -w frontend)
+4. Scan QR again – it will open the verify page on your phone
+========================================

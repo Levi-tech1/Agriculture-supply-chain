@@ -1,0 +1,159 @@
+/* Mobile-friendly verify user page (iPhone Safari) */
+.page {
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  max-width: 640px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+  color: var(--accent);
+}
+
+.sub {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.verificationResult {
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.resultVerified {
+  background: rgba(63, 185, 80, 0.12);
+  border: 1px solid var(--accent);
+}
+
+.resultFailed {
+  background: rgba(248, 81, 73, 0.12);
+  border: 1px solid var(--danger);
+}
+
+.resultIcon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.resultTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.resultVerified .resultTitle { color: var(--accent); }
+.resultFailed .resultTitle { color: var(--danger); }
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.4rem 1rem;
+}
+
+.dl dt {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.dl dd {
+  margin: 0;
+  word-break: break-all;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.badgeGreen {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(63, 185, 80, 0.2);
+  color: #3fb950;
+}
+
+.badgeYellow {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(210, 153, 34, 0.2);
+  color: #d29922;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+}
+
+.error {
+  color: var(--danger);
+  margin: 0.5rem 0 0;
+}
+
+.homeLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footerNote {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+}
+
+.footer a {
+  color: var(--accent);
+}

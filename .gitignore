@@ -1,0 +1,15 @@
+# Root-level dist (backend emits backend/dist/; ignore stray root dist/)
+/dist/
+
+node_modules/
+.env
+.env.local
+ADMIN_LOGIN.txt
+*.log
+.DS_Store
+contracts/artifacts/
+contracts/cache/
+backend/node_modules/
+frontend/node_modules/
+frontend/dist/
+backend/dist/
